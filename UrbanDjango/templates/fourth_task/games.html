@@ -1,0 +1,13 @@
+{% extends 'fourth_task/menu.html' %}
+
+{% block pagename %}{{ title }}{% endblock %}
+
+{% block content %}
+<h1>{{ head }}</h1>
+<ul>
+    {% for game in games %}
+    <li><b>{{ game }}</b><button>{{ buy }}</button></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'main' %}" class="button">{{ return }}</a>
+{% endblock %}

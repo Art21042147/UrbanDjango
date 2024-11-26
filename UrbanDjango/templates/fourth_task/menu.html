@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'task4/style.css' %}">
+</head>
+<body>
+    <div class="menu">
+        {% block menu %}
+        <a href="{% url 'main' %}">Main Page</a>
+        <a href="{% url 'shop' %}">Shop</a>
+        <a href="{% url 'cart' %}">Cart</a>
+        {% endblock %}
+    </div>
+    <h1>{% block pagename %}Default Page{% endblock %}</h1>
+    <div class="content">
+        {% block content %}Default Content{% endblock %}
+    </div>
+</body>
+</html>
